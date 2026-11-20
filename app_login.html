@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>PRIME MODS</title></head>
+<body><h2>PRIME MODS</h2><p>Activating...</p>
+<script>
+(function(){
+  var key = localStorage.getItem('JAAT_APP_SAVED_KEY') || 'MIRROR_ACTIVE';
+  var hwid = (window.Android && Android.getHWID) ? Android.getHWID() : 'MIRROR';
+  if (window.Android && Android.onLoginSuccessWithSalt) {
+    Android.onLoginSuccessWithSalt('MIRROR_ACTIVE', key, 'VIP Lifetime', 'Never', 'YOU', 'MIRROR');
+  } else if (window.Android && Android.onLoginSuccess) {
+    Android.onLoginSuccess('MIRROR_ACTIVE', key, 'VIP Lifetime', 'Never', 'YOU');
+  }
+})();
+</script></body></html>
